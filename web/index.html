@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title></title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="highcharts.js"></script>
+        <script type="text/javascript">
+            $(document).ready( function() {
+                var options = {
+                    "chart": {
+                        "renderTo": "container",
+                        "type": "spline",
+                        "width": 500,
+                        "height": 400,
+                    },
+                    "title": {
+                        "text": "Followers"
+                    },
+                    "xAxis": {
+                        "type": "datetime",
+                    },
+                    "yAxis": [{
+                        "title": {
+                            "text": "Followers"
+                        }
+                    }],
+                    "legend" : {
+                        "enabled" : false,
+                    },
+                    "series": [{
+                        "name": "Followers",
+                        "animation": false,
+                        "data": [
+                            [Date.UTC( 2012, 0, 18), 16524537],
+                            [Date.UTC( 2012, 0, 19), 16567219],
+                            [Date.UTC( 2012, 0, 20), 16584627],
+                            [Date.UTC( 2012, 0, 21), 16616110],
+                            [Date.UTC( 2012, 0, 22), 16649000],
+                            [Date.UTC( 2012, 0, 23), 16682352],
+                            [Date.UTC( 2012, 0, 24), 16713731],
+                            [Date.UTC( 2012, 0, 25), 16744266],
+                            [Date.UTC( 2012, 0, 26), 16773029],
+                            [Date.UTC( 2012, 0, 27), 16804077],
+                            [Date.UTC( 2012, 0, 28), 16836582],
+                            [Date.UTC( 2012, 0, 29), 16875308],
+                            [Date.UTC( 2012, 0, 30), 16913783],
+                            [Date.UTC( 2012, 0, 31), 16943339]
+                        ]
+                    }]
+                };
+
+            	window.chartWidth = options.chart.width;
+                window.chartHeight = options.chart.height;
+                var chart = new Highcharts.Chart( options );
+            } );
+        </script>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+			background-color: #F7F7F7; 
+		}
+
+		#container {
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+    </head>
+    <body>
+        <div id="container"></div>
+    </body>
+</html>
+
